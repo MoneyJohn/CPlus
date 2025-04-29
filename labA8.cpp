@@ -82,10 +82,27 @@ int main(){
     }else{
         std::cout<<"Book not found"<<std::endl;
     }
-    
 
-
-
-
-
+    //question 4
+    std::cout<<"Enter the number of products"<<std::endl;
+    std::cin>>n;
+    float* prices = new float[n];
+    std::cout<<"Enter the price for "<< n<<" products"<<std::endl;
+    for(int i=0; i< n; i++){
+        std::cin>> prices[i];
+    }
+    int p;
+    float new_price;
+    std::cout<<"Enter the index of the product to change: "<<std::endl;
+    std::cin>>p;
+    std::cout<<"Enter the price change"<<std::endl;
+    std::cin>>new_price;
+    prices[p] = new_price;
+    float sum1 =0;
+    std::cout<<"Updated product prices: ";
+    for(int i=0; i<n; i++){
+        std::cout<<prices[i]<<std::endl;
+        sum1 += prices[i];
+    }
+    std::cout<<"Total inventory cost: " << sum1<<std::endl;
 }
